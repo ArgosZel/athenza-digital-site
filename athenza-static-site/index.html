@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Athenza Digital | Website & App Optimization Services</title>
+    <meta name="description" content="We optimize websites for speed, SEO, and conversions. Professional optimization services for businesses across Europe.">
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'deep-navy': '#051025',
+                        'royal-purple': '#7732A8',
+                        'slate-gray': '#555E6D',
+                        'light-purple': '#834FAA',
+                        'cool-gray': '#9CA0AA',
+                        'light-gray': '#BBBBC6',
+                        'off-white': '#F3F4F4',
+                        'dark-blue': '#162333',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'mono': ['Roboto Mono', 'monospace'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .btn-primary {
+            background-color: #7732A8;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #5a2580;
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid #7732A8;
+            color: #7732A8;
+            transition: all 0.3s ease;
+        }
+        .btn-secondary:hover {
+            background-color: #7732A8;
+            color: white;
+        }
+        .section-padding {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+        @media (max-width: 768px) {
+            .section-padding {
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+            }
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #051025 0%, #162333 50%, #7732A8 100%);
+        }
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(5, 16, 37, 0.1);
+        }
+    </style>
+    
+    <!-- Favicon (placeholder) -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+</head>
+<body class="font-sans text-dark-blue bg-off-white">
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-light-gray">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-3">
+                <picture>
+                  <source srcset="assets/logo-colored-400.webp" type="image/webp">
+                  <img src="assets/logo-colored-400.png" alt="Athenza Digital Logo" class="h-12 w-auto" width="55" height="48" loading="eager">
+                </picture>
+                <span class="text-xl font-semibold text-deep-navy">Athenza Digital</span>
+            </a>
+            
+            <!-- Desktop menu -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#services" class="text-slate-gray hover:text-royal-purple font-medium transition">Services</a>
+                <a href="#process" class="text-slate-gray hover:text-royal-purple font-medium transition">How It Works</a>
+                <a href="#contact" class="text-slate-gray hover:text-royal-purple font-medium transition">Contact</a>
+                <a href="#contact" class="btn-primary px-6 py-2 rounded-lg font-semibold">Get Free Audit</a>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-button" class="md:hidden text-slate-gray">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </nav>
+        
+        <!-- Mobile menu (hidden) -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-light-gray px-6 py-4">
+            <a href="#services" class="block py-2 text-slate-gray hover:text-royal-purple">Services</a>
+            <a href="#process" class="block py-2 text-slate-gray hover:text-royal-purple">How It Works</a>
+            <a href="#contact" class="block py-2 text-slate-gray hover:text-royal-purple">Contact</a>
+            <a href="#contact" class="btn-primary inline-block mt-4 px-6 py-2 rounded-lg font-semibold">Get Free Audit</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white">
+        <div class="container mx-auto px-6 py-20 md:py-32">
+            <div class="max-w-3xl">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
+                    Your Website Is Losing You <span class="text-royal-purple">Money</span>.
+                    <br>We Fix That.
+                </h1>
+                <p class="text-xl md:text-2xl text-light-gray mb-10 max-w-2xl">
+                    We audit and optimize websites for speed, SEO, and conversions. 
+                    Stop wasting visitors – turn them into customers.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
+                    <a href="#contact" class="btn-primary px-8 py-4 rounded-lg text-lg font-semibold text-center">
+                        Get Your Free Performance Audit
+                    </a>
+                    <a href="#services" class="btn-secondary px-8 py-4 rounded-lg text-lg font-semibold text-center">
+                        View Our Services
+                    </a>
+                </div>
+                
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-white section-padding">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="text-5xl font-bold text-royal-purple mb-2">+83%</div>
+                    <div class="text-slate-gray text-lg">Average Mobile Score Improvement</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-5xl font-bold text-royal-purple mb-2">2.4s</div>
+                    <div class="text-slate-gray text-lg">Faster Page Load Times</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-5xl font-bold text-royal-purple mb-2">€12.5k</div>
+                    <div class="text-slate-gray text-lg">Average Client Revenue Uplift</div>
+                </div>
+                
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="bg-off-white section-padding">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-deep-navy mb-4">What We Optimize</h2>
+            <p class="text-xl text-slate-gray text-center mb-12 max-w-3xl mx-auto">
+                We focus on the metrics that directly impact your bottom line.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-2xl card-shadow p-8">
+                    <div class="w-16 h-16 bg-royal-purple/10 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-royal-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-deep-navy mb-4">PageSpeed & Core Web Vitals</h3>
+                    <p class="text-slate-gray mb-6">
+                        Google penalizes slow sites. We fix LCP, CLS, and FID issues to improve rankings and user experience.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-slate-gray">
+                            <svg class="w-5 h-5 text-royal-purple mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            Mobile & desktop optimization
+                        </li>
+                        <li class="flex items-center text-slate-gray">
+                            <svg class="w-5 h-5 text-royal-purple mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            Core Web Vitals fixes
+                        </li>
+                        <li class="flex items-center text-slate-gray">
+                            <svg class="w-5 h-5 text-royal-purple mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            Hosting & CDN configuration
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white rounded-2xl card-shadow p-8">
+                    <div class="w-16 h-16 bg-royal-purple/10 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-royal-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-deep-navy mb-4">SEO & Mobile-First Design</h3>
+                    <p class="text-slate-gray mb-6">
+                        Over 60% of traffic comes from mobile. We ensure your site ranks well and converts on all devices.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-slate-gray">
+                            <svg class="w-5 h-5 text-royal-purple mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            Mobile-responsive redesign
+                        </li>
+                        <li class="flex items-center text-slate-gray">
+                            <svg class="w-5 h-5 text-royal-purple mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            Technical SEO audit
+                        </li>
+                        <li class="flex items-center text-slate-gray">
+                            <svg class="w-5 h-5 text-royal-purple mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            Structured data & meta optimization
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white rounded-2xl card-shadow p-8">
+                    <div class="w-16 h-16 bg-royal-purple/10 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-royal-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-deep-navy mb-4">Conversion Rate Optimization</h3>
+                    <p class="text-slate-gray mb-6">
+                        Speed alone doesn't convert. We optimize user flows, CTAs, and checkout processes for maximum revenue.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-slate-gray">
+                            <svg class="w-5 h-5 text-royal-purple mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            User journey analysis
+                        </li>
+                        <li class="flex items-center text-slate-gray">
+                            <svg class="w-5 h-5 text-royal-purple mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            A/B testing implementation
+                        </li>
+                        <li class="flex items-center text-slate-gray">
+                            <svg class="w-5 h-5 text-royal-purple mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            Heatmap & session recording
+                        </li>
+                    </ul>
+                </div>
+                <!-- Service 4 -->
+                <div class="bg-white rounded-2xl card-shadow p-8">
+                    <div class="w-16 h-16 bg-royal-purple/10 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-royal-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-deep-navy mb-4">Free Starter Website</h3>
+                    <p class="text-slate-gray mb-6">
+                        Get a professional online presence with a static website and email—free for 6 months.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-slate-gray">
+                            <svg class="w-5 h-5 text-royal-purple mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            Professional static website (up to 5 pages)
+                        </li>
+                        <li class="flex items-center text-slate-gray">
+                            <svg class="w-5 h-5 text-royal-purple mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            One professional email account (yourname@yourdomain.com)
+                        </li>
+                        <li class="flex items-center text-slate-gray">
+                            <svg class="w-5 h-5 text-royal-purple mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            Free hosting for 6 months
+                        </li>
+                        <li class="flex items-center text-slate-gray">
+                            <svg class="w-5 h-5 text-royal-purple mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            Domain registration not included
+                        </li>
+                    </ul>
+                    <p class="text-sm text-slate-gray italic">
+                        After 6 months, affordable monthly plans available.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="bg-white section-padding">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-deep-navy mb-4">How It Works</h2>
+            <p class="text-xl text-slate-gray text-center mb-12 max-w-3xl mx-auto">
+                A simple 4‑step process from audit to implementation.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-royal-purple text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">1</div>
+                    <h3 class="text-xl font-bold text-deep-navy mb-3">Scan</h3>
+                    <p class="text-slate-gray">
+                        We analyze your website's performance, SEO, and conversion bottlenecks.
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-royal-purple text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">2</div>
+                    <h3 class="text-xl font-bold text-deep-navy mb-3">Analyze</h3>
+                    <p class="text-slate-gray">
+                        Detailed report with specific issues and improvement opportunities.
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-royal-purple text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">3</div>
+                    <h3 class="text-xl font-bold text-deep-navy mb-3">Propose</h3>
+                    <p class="text-slate-gray">
+                        Custom optimization plan with clear ROI and implementation timeline.
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-royal-purple text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">4</div>
+                    <h3 class="text-xl font-bold text-deep-navy mb-3">Implement</h3>
+                    <p class="text-slate-gray">
+                        We handle the technical work; you review results.
+                    </p>
+                </div>
+                
+    </section>
+
+    <!-- CTA Section -->
+    <section class="gradient-bg text-white section-padding">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Optimize Your Website?</h2>
+            <p class="text-xl text-light-gray max-w-2xl mx-auto mb-10">
+                Get a <span class="font-bold">free, no‑obligation audit</span> of your website's performance. 
+                We'll identify the top 3 issues hurting your conversions.
+            </p>
+            <a href="#contact" class="btn-primary px-10 py-4 rounded-lg text-lg font-semibold inline-block">
+                Request Free Audit
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-off-white section-padding">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-deep-navy mb-4">Get Your Free Audit</h2>
+                <p class="text-xl text-slate-gray text-center mb-12 max-w-2xl mx-auto">
+                    Submit your website URL and email. We'll send you a detailed performance analysis within 24 hours.
+                </p>
+                
+                <div class="bg-white rounded-2xl card-shadow p-8 md:p-12">
+                    <form id="audit-form" class="space-y-6" action="https://formspree.io/f/mnjldylp" method="POST">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-slate-gray font-medium mb-2">Your Name</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-light-gray rounded-lg focus:ring-2 focus:ring-royal-purple focus:border-transparent" placeholder="John Smith">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-slate-gray font-medium mb-2">Email Address</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-light-gray rounded-lg focus:ring-2 focus:ring-royal-purple focus:border-transparent" placeholder="john@example.com">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="website" class="block text-slate-gray font-medium mb-2">Website URL</label>
+                            <input type="text" id="website" name="website" class="w-full px-4 py-3 border border-light-gray rounded-lg focus:ring-2 focus:ring-royal-purple focus:border-transparent" placeholder="example.com or www.example.com">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-slate-gray font-medium mb-2">Additional Notes (Optional)</label>
+                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 border border-light-gray rounded-lg focus:ring-2 focus:ring-royal-purple focus:border-transparent" placeholder="Any specific concerns or goals..."></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn-primary px-10 py-4 rounded-lg text-lg font-semibold">
+                                Send Audit Request
+                            </button>
+                        </div>
+                        <p class="text-center text-cool-gray text-sm">
+                            By submitting, you agree to our <a href="#" class="text-royal-purple underline">Privacy Policy</a>. 
+                            We'll never share your information.
+                        </p>
+                    </form>
+                    
+                    <div class="mt-12 pt-8 border-t border-light-gray">
+                        <h3 class="text-xl font-bold text-deep-navy mb-4">Or Contact Us Directly</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 bg-royal-purple/10 rounded-lg flex items-center justify-center mr-4">
+                                    <svg class="w-5 h-5 text-royal-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="font-medium text-deep-navy">Email</div>
+                                    <a href="mailto:info@athenzadigital.com" class="text-slate-gray hover:text-royal-purple">info@athenzadigital.com</a>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 bg-royal-purple/10 rounded-lg flex items-center justify-center mr-4">
+                                    <svg class="w-5 h-5 text-royal-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="font-medium text-deep-navy">Location</div>
+                                    <div class="text-slate-gray">Serving Europe Remotely</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 bg-royal-purple/10 rounded-lg flex items-center justify-center mr-4">
+                                    <svg class="w-5 h-5 text-royal-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="font-medium text-deep-navy">Response Time</div>
+                                    <div class="text-slate-gray">Within 24 hours</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-deep-navy text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-8 md:mb-0">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <picture>
+                          <source srcset="assets/logo-white-400.webp" type="image/webp">
+                          <img src="assets/logo-white-400.png" alt="Athenza Digital Logo" class="h-12 w-auto" width="55" height="48" loading="eager">
+                        </picture>
+                        <span class="text-xl font-semibold">Athenza Digital</span>
+                    </div>
+                    <p class="text-cool-gray max-w-md">
+                        We optimize websites for speed, SEO, and conversions. 
+                        Serving businesses across Europe.
+                    </p>
+                </div>
+                <div class="text-center md:text-right">
+                    <div class="text-lg font-semibold mb-4">Contact Info</div>
+                    <p class="text-cool-gray">info@athenzadigital.com</p>
+                    <p class="text-cool-gray mt-2">© 2026 Athenza Digital. All rights reserved.</p>
+                </div>
+                
+
+                <!-- Service 4 -->
+                <div class="bg-white rounded-2xl card-shadow p-8">
+                    <div class="w-16 h-16 bg-royal-purple/10 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-royal-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-deep-navy mb-4">Free Starter Website</h3>
+                    <p class="text-slate-gray mb-6">
+                        Get a professional online presence with a static website and email—free for 6 months.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-slate-gray">
+                            <svg class="w-5 h-5 text-royal-purple mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            Professional static website (up to 5 pages)
+                        </li>
+                        <li class="flex items-center text-slate-gray">
+                            <svg class="w-5 h-5 text-royal-purple mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            One professional email account (yourname@yourdomain.com)
+                        </li>
+                        <li class="flex items-center text-slate-gray">
+                            <svg class="w-5 h-5 text-royal-purple mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            Free hosting for 6 months
+                        </li>
+                        <li class="flex items-center text-slate-gray">
+                            <svg class="w-5 h-5 text-royal-purple mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            Domain registration not included
+                        </li>
+                    </ul>
+                    <p class="text-sm text-slate-gray italic">
+                        After 6 months, affordable monthly plans available.
+                    </p>
+                </div>
+            </div>
+        </div>
+</html>
