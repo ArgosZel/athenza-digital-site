@@ -403,6 +403,7 @@
                                 Yes, add me to the Athenza newsletter for website optimization tips (bi‑weekly, unsubscribe anytime)
                             </label>
                         </div>
+                        <input type="hidden" name="_next" value="https://athenzadigital.com/?form=success#contact">
                         <div class="text-center">
                             <button type="submit" class="btn-primary px-10 py-4 rounded-lg text-lg font-semibold">
                                 Get in Touch
@@ -507,5 +508,45 @@
             </div>
         </div>
     </footer>
+    <script>
+        // Handle form submission success
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('form') && urlParams.get('form') === 'success') {
+                const form = document.getElementById('audit-form');
+                if (form) {
+                    // Replace form with success message
+                    form.innerHTML = `
+                        <div class="text-center py-12">
+                            <div class="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-6">
+                                <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-deep-navy mb-4">Thank You!</h3>
+                            <p class="text-slate-gray text-lg max-w-lg mx-auto">
+                                Your audit request has been submitted successfully. We'll review your website and get back to you within 24 hours.
+                            </p>
+                            <p class="text-cool-gray mt-4">
+                                Check your email for a confirmation (including our newsletter if you opted in).
+                            </p>
+                            <div class="mt-8">
+                                <a href="#contact" class="btn-primary px-8 py-3 rounded-lg font-semibold inline-block">
+                                    Back to Contact Info
+                                </a>
+                            </div>
+                        </div>
+                    `;
+                    // Scroll to contact section if needed
+                    setTimeout(() => {
+                        const contactSection = document.getElementById('contact');
+                        if (contactSection) {
+                            contactSection.scrollIntoView({ behavior: 'smooth' });
+                        }
+                    }, 100);
+                }
+            }
+        });
+    </script>
 </body>
 </html>
